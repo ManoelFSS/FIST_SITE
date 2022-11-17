@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    height: 12vh;
+    width: 100%;
+    background-color: #000;
+    align-items: center;
+    position: fixed;
+  }
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  
+  header ul {
+    display: flex;
+    list-style: none;
+  }
+  header li {
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    background-color: brown;
+    text-align: center;
+    border-radius: 10px;
+  }
+  header a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  header li:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 0, 0);
+  }
+  .banner {
+    background: url(https://cdn.ome.lt/legacy/images/galerias/Pacific-Rim/Circulo-de-Fogo-banner-br-02.jpg)
+      no-repeat center / cover;
+    height: 100vh;
+    box-shadow: 0px 10px 20px #000;
+  }
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  figure {
+    box-shadow: 0px 10px 30px #000;
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bolder;
+    width: 250px;
+    padding: 5px;
+    margin-top: 30px;
+    transition: all 0.7s;
+  }
+  figure img {
+    margin-top: 10px;
+    width: 220px;
+    height: 350px;
+  }
+  figure:hover {
+    transform: scale(1.1);
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14vh;
+    background-color: #000;
+    color: aliceblue;
+    padding: 20px;
+  }
+  input {
+    display: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    background: #fff
+      url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEM9p0isF0rLA_yr6y8GQ3GERGGbqtHz4jNw&usqp=CAU)
+      no-repeat center / 100% 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .banner {
+      height: 95vh;
+    }
+    header {
+      position: absolute;
+    }
+    header nav {
+      position: absolute;
+      top: 0;
+      width: 0px;
+      flex: 0;
+      left: 0;
+      height: 95vh;
+      transition: all 0.2s;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      background-color: rgba(0, 0, 0, 0.664);
+      border: #fff solid px;
+    }
+    header ul {
+      display: block;
+      position: absolute;
+      top: 100px;
+    }
+    input {
+      display: block;
+      z-index: 10;
+      left: 10px;
+      transition: all 0.2s;
+    }
+    input:checked {
+      left: 105px;
+      transform: rotate(90deg);
+      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSJe-7_-5kEFr7ANfj8oIQRL6R-sUl1nRLnRSKF6XADSCN616UmGlMaH2A2WnDVW7Gzok&usqp=CAU)
+        no-repeat center / 100% 100%;
+      border-radius: 50%;
+    }
+    input:checked ~ nav {
+      width: 150px;
+    }
+  }
+  
